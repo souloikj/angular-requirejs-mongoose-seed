@@ -1,5 +1,7 @@
-angular.module('HomepageController', [])
-.controller('HomepageController', function($scope) {
-
-    $scope.tagline = 'This is the homepage!';
-})
+define([
+    'app'
+], function(app) {
+    app.controller('HomepageController', ['$scope', function($scope) {
+        $scope.tagline = 'This is the homepage!';
+    }]);
+});

@@ -1,23 +1,27 @@
-require.config({
-    baseUrl: 'public/bower/',
-    paths: {
-        'angular': 'angular/angular',
-        'angular-route': 'angular-route/angular-route',
-        'angular-animate': 'angular-animate/angular-animate',
-        'angular-resource': 'angular-resource/angular-resource',
-    },
-    shim: {
-        'angular': {
-            exports: 'angular'
-        },
-        'angular-route': ['angular'],
-        'angular-animate': ['angular'],
-        'angular-resource': ['angular']
-    }
-});
+define([
+    'angular',
+    'angular-route',
+    'angular-animate',
+    'angular-resource'
+], function(angular) {
+    var app = angular.module('sampleApp', ['ngRoute', 'ngAnimate', 'ngResource']);
+    app.init = function() {
+        angular.bootstrap(document, ['sampleApp']);
+    };
 
-define('app', ['angular', 'angular-route', 'angular-animate', 'angular-resource'],
-    function(angular) {
-        var app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngResource']);
-        return app;
+    app.config(function($routeProvider, $locationProvider) {
+        $routeProvider
+        .when('/', {
+            templateUrl: 'app/views/homepage/templates/Homepage.html',
+            controller: 'app/views/homepage/HomepageController'
+        })
+        .when('/join', {
+            templateUrl: 'app/views/businessAdd/templates/BusinessAdd.html',
+            controller: 'app/views/businessAdd/BusinessAddController'
+        });
+
+        $locationProvider.html5Mode(true);
     });
+
+    return app;
+});
