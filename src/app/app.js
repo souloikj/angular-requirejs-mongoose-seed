@@ -1,10 +1,14 @@
 define([
     'angular',
-    'angular-route',
-    'angular-animate',
-    'angular-resource'
-], function(angular) {
-    var app = angular.module('sampleApp', ['ngRoute', 'ngAnimate', 'ngResource']);
+    'views/homepage/HomepageController',
+    'views/businessAdd/BusinessAddController'
+], function(angular, HomepageController, BusinessAddController) {
+    var app = angular.module('sampleApp', [
+        'app.views.controller.homePage',
+        'app.views.controller.businessAdd',
+        'ngRoute',
+        'ngAnimate',
+        'ngResource']);
     app.init = function() {
         angular.bootstrap(document, ['sampleApp']);
     };
@@ -13,11 +17,11 @@ define([
         $routeProvider
         .when('/', {
             templateUrl: 'app/views/homepage/templates/Homepage.html',
-            controller: 'app/views/homepage/HomepageController'
+            controller: 'HomepageController'
         })
         .when('/join', {
             templateUrl: 'app/views/businessAdd/templates/BusinessAdd.html',
-            controller: 'app/views/businessAdd/BusinessAddController'
+            controller: 'BusinessAddController'
         });
 
         $locationProvider.html5Mode(true);

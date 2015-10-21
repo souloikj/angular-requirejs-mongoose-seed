@@ -1,7 +1,8 @@
 define([
-    'app'
-], function(app) {
-    app.controller('HomepageController', ['$scope', function($scope) {
-        $scope.tagline = 'This is the homepage!';
-    }]);
+    'angular'
+], function(angular) {
+    angular.module('app.views.controller.homePage', [])
+        .controller("HomepageController", function($scope) {
+            $scope.tagline = 'This is the homepage';
+        });
 });
