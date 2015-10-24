@@ -1,5 +1,5 @@
 {
-  "name": "lovecity",
+  "name": "seed-app",
   "version": "0.0.1",
   "description": "",
   "main": "src/server.js",
@@ -17,7 +17,18 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "browserify": "^11.2.0",
+    "connect-livereload": "^0.5.3",
     "gulp": "^3.9.0",
-    "nodemon": "^1.7.1"
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.7",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

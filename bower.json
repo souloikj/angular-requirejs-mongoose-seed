@@ -1,5 +1,5 @@
 {
-    "name": "lovecity",
+    "name": "seed-app",
     "version": "0.0.1",
     "dependencies": {
         "bootstrap": "latest",
