@@ -2,9 +2,9 @@
   "name": "seed-app",
   "version": "0.0.1",
   "description": "",
-  "main": "src/server.js",
+  "main": "app/app.js",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "nodemon server.js",
     "test": "echo 'No tests'"
   },
   "keywords": [

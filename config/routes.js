@@ -5,7 +5,7 @@ var AppRoutes = function(app) {
     });
 
     app.get('*', function(req, res) {
-        res.sendfile('src/app/index.html');
+        res.sendfile('app/index.html');
     });
 };
 
